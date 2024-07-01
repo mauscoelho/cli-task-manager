@@ -1,6 +1,8 @@
 import { Command } from 'commander';
+import TaskManager from './taskManager';
 
 const program = new Command();
+const taskManager = new TaskManager();
 
 program
   .version('1.0.0')
@@ -10,7 +12,7 @@ program
   .command('add <title> <description>')
   .description('Add a new task')
   .action((title, description) => {
-    console.log('task added', title, description);
+    taskManager.addTask(title, description);
   });
 
 program.parse(process.argv);
