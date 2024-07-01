@@ -14,3 +14,8 @@ List All Tasks
 ```bash
 npx ts-node src/index.ts list
 ```
+
+Complete a Task
+```bash
+npx ts-node src/index.ts complete <id>
+```

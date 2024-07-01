@@ -22,4 +22,12 @@ program
     taskManager.listTasks();
   });
 
+program
+  .command('complete <id>')
+  .description('Mark a task as completed')
+  .action((id) => {
+    taskManager.completeTask(parseInt(id));
+  });
+
+
 program.parse(process.argv);

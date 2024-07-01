@@ -46,4 +46,15 @@ export default class TaskManager {
     });
   }
 
+  completeTask(id: number) {
+    const task = this.tasks.find(task => task.id === id);
+    if (task) {
+      task.completed = true;
+      this.saveTasks();
+      console.log(`Task completed: ${task.title}`);
+    } else {
+      console.log(`Task not found: ${id}`);
+    }
+  }
+
 }
