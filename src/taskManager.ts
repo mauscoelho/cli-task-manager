@@ -57,4 +57,14 @@ export default class TaskManager {
     }
   }
 
+  removeTask(id: number) {
+    const taskIndex = this.tasks.findIndex(task => task.id === id);
+    if (taskIndex > -1) {
+      const removedTask = this.tasks.splice(taskIndex, 1);
+      this.saveTasks();
+      console.log(`Task removed: ${removedTask[0].title}`);
+    } else {
+      console.log(`Task not found: ${id}`);
+    }
+  }
 }

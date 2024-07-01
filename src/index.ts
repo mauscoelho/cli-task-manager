@@ -29,5 +29,13 @@ program
     taskManager.completeTask(parseInt(id));
   });
 
+program
+  .command('remove <id>')
+  .description('Remove a task')
+  .action((id) => {
+    taskManager.removeTask(parseInt(id));
+  });
+
+
 
 program.parse(process.argv);
