@@ -15,4 +15,11 @@ program
     taskManager.addTask(title, description);
   });
 
+program
+  .command('list')
+  .description('List all tasks')
+  .action(() => {
+    taskManager.listTasks();
+  });
+
 program.parse(process.argv);

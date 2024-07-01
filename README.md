@@ -9,3 +9,8 @@ Add a Task
 ```bash
 npx ts-node src/index.ts add "Title" "Description"
 ```
+
+List All Tasks
+```bash
+npx ts-node src/index.ts list
+```
